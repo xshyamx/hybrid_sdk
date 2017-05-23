@@ -6,6 +6,8 @@ The SDK should be used to communicate between the Avaamo Bot Designer and client
 
 The core idea is to implement services and register them when the ```Avaamo``` constructor is instantiated.
 
+To get started, clone this repository and ```npm install``` the dependencies.
+
 The following sample code shows how to implement services in the client end.
 
 ```
