@@ -72,6 +72,8 @@ This piece of code in the designer will receive the response of the services fro
 
 The ```HybridSDK.call``` method is available only in output nodes of the conversation flow and it takes 2 arguments - a service name and payload. This payload will be available as argument in the corresponding service.
 
+***Troubleshooting***
+
 If a service is not found or a service is not a method, the code in the designer will receive the following responses respectively:
 
 ```
@@ -87,6 +89,5 @@ If a service is not found or a service is not a method, the code in the designer
     message: `Service "service_name" is not a method`
 }
 ```
-***Troubleshooting***
 
 If in case the ```HybridSDK.call``` doesn't receive response for a service call in 25 seconds, a "SERVICE TIME-OUT" exception will be thrown.
