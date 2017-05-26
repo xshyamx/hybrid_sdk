@@ -2,14 +2,14 @@
 
 The SDK provides a secure way to call code running on your local machine inside a chatbot. Your code can be connecting to your Enterprise Information Systems to process a businss function.
 
-Key Advantages
+***Key Advantages***
 1. The hybrid SDK does not require you to develop any SOAP/REST services.
 2. Use any of your libraries and run the business logic in any container and machine of your choice.
 
 
 The core idea is to implement services and register them when the ```Avaamo``` constructor is instantiated.
 
-Get Started
+***Get Started***
 
 1. clone this repository and ```npm install``` the dependencies.
 2. Initialize the Avaamo library.
@@ -44,9 +44,11 @@ new Avaamo(bot_uuid, access_token, {
 In line #25, the 3rd argument to the instantiation method is the collection of services. 
 Each service is a method which should return a value.
 
-The service method will be called whenever the SDK receives a service call from the Bot Designer.
+The service method will be called whenever the SDK receives a service call from the Bot.
 
-In the designer, the following piece of code will call the ```create_ticket``` service and get the response.
+***Using the service in a bot***
+
+In the designer, the following piece of code(inside a Javascript element) will call the ```create_ticket``` service and get the response.
 
 ```
 return HybridSDK.call(
@@ -66,6 +68,7 @@ return HybridSDK.call(
 
 This piece of code in the designer will receive the response of the services from the SDK. 
 
+****Note****
 The ```HybridSDK.call``` method is available only in output nodes of the conversation flow and it takes 2 arguments - a service name and payload. This payload will be available as argument in the corresponding service.
 
 If a service is not found or a service is not a method, the code in the designer will receive the following responses respectively:
@@ -83,5 +86,5 @@ If a service is not found or a service is not a method, the code in the designer
     message: `Service "service_name" is not a method`
 }
 ```
-
+***Troubleshooting***
 If in case the ```HybridSDK.call``` doesn't receive response for a service call in 25 seconds, a "SERVICE TIME-OUT" exception will be thrown.
