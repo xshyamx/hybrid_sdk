@@ -2,14 +2,14 @@
 
 The SDK provides a secure way to call code running on your local machine inside a chatbot. Your code can be connecting to your Enterprise Information Systems to process a businss function.
 
-***Key Advantages***
+****Key Advantages****
 1. The hybrid SDK does not require you to develop any SOAP/REST services.
 2. Use any of your libraries and run the business logic in any container and machine of your choice.
 
 
 The core idea is to implement services and register them when the ```Avaamo``` constructor is instantiated.
 
-***Get Started***
+****Get Started****
 
 1. clone this repository and ```npm install``` the dependencies.
 2. Initialize the Avaamo library.
@@ -46,7 +46,7 @@ Each service is a method which should return a value.
 
 The service method will be called whenever the SDK receives a service call from the Bot.
 
-***Using the service in a bot***
+****Using the service in a bot****
 
 In the designer, the following piece of code(inside a Javascript element) will call the ```create_ticket``` service and get the response.
 
@@ -72,7 +72,7 @@ This piece of code in the designer will receive the response of the services fro
 
 The ```HybridSDK.call``` method is available only in output nodes of the conversation flow and it takes 2 arguments - a service name and payload. This payload will be available as argument in the corresponding service.
 
-***Troubleshooting***
+****Troubleshooting****
 
 If a service is not found or a service is not a method, the code in the designer will receive the following responses respectively:
 
